@@ -1,0 +1,37 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="cgN_zbLe7VPetwVui24B">
+    <mxGraphModel dx="1006" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-6" edge="1" parent="1" source="8ub_8j_lGZS2SeIEfzrg-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8ub_8j_lGZS2SeIEfzrg-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-7" edge="1" parent="1" source="8ub_8j_lGZS2SeIEfzrg-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8ub_8j_lGZS2SeIEfzrg-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-8" edge="1" parent="1" source="8ub_8j_lGZS2SeIEfzrg-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8ub_8j_lGZS2SeIEfzrg-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-9" edge="1" parent="1" source="8ub_8j_lGZS2SeIEfzrg-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8ub_8j_lGZS2SeIEfzrg-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Inicio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="365" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b style=&quot;&quot;&gt;&lt;u&gt;Sobre Nosotros&lt;/u&gt;&lt;/b&gt;&lt;div&gt;Historia, Chef&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;&lt;u&gt;Menu&lt;/u&gt;&lt;/b&gt;&lt;div&gt;Platos y Precios&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="270" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;&lt;u&gt;Reservas&lt;/u&gt;&lt;/b&gt;&lt;div&gt;Formularios&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="8ub_8j_lGZS2SeIEfzrg-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;&lt;u&gt;Contacto&lt;/u&gt;&lt;/b&gt;&lt;div&gt;Ubicación, mapa&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="630" y="220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
