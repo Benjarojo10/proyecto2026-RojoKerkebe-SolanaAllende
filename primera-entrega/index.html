@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Benjamin Rojo Kerkebe, Justo Solana Allende">
+    <meta name="description" content="34 Roof, restaurante con mirador 360° en el piso 34. Desayunos y almuerzos con vista panorámica de Córdoba.">
+    <meta name="keywords" content="34 Roof, restaurante, Córdoba, mirador, desayunos, almuerzos, reservas">
+    <title>34 Roof | Mirador 360° en Córdoba</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Tenor+Sans&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-pagina">
+        <header class="encabezado">
+            <div class="encabezado-contenido">
+                <h1 class="marca">34 Roof</h1>
+                <button id="boton-menu" type="button" aria-label="Abrir menú de navegación" onclick="alternarMenu()">☰</button>
+                <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+                    <a href="index.html" class="enlace-activo">Inicio</a>
+                    <a href="sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="reservas.html">Reservas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <img src="imagenes/hero-vista.jpg" alt="Terraza de 34 Roof con ventanales, olivos y vista panorámica">
+                <div class="hero-texto">
+                    <h2>Mirador 360°</h2>
+                    <p>Desayunos y almuerzos con vista panorámica de Córdoba, en el piso 34.</p>
+                    <a href="reservas.html" class="boton">Reservar ahora</a>
+                </div>
+            </section>
+
+            <section class="tarjetas">
+                <article class="tarjeta">
+                    <img src="imagenes/espacio.jpg" alt="Salón de 34 Roof con sillones y ventanales sobre la ciudad">
+                    <div class="tarjeta-texto">
+                        <h2>Sobre nosotros</h2>
+                        <p>Un espacio pensado con materiales nobles para disfrutar la ciudad desde las alturas.</p>
+                        <a href="sobre-nosotros.html">Conocé el lugar</a>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="imagenes/platos.jpg" alt="Chef de 34 Roof emplatando una pasta">
+                    <div class="tarjeta-texto">
+                        <h2>Nuestro menú</h2>
+                        <p>Desayunos y almuerzos de 8 a 15 hs. Armá tu pedido y mirá cuánto sale tu cuenta.</p>
+                        <a href="menu.html">Ver el menú</a>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="imagenes/ubicacion.jpg" alt="Pasillo de 34 Roof con ventanales y vista de la ciudad">
+                    <div class="tarjeta-texto">
+                        <h2>Ubicación</h2>
+                        <p>Humberto Primo 670, piso 34, Córdoba.</p>
+                        <a href="contacto.html">Cómo llegar</a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="reserva-rapida">
+                <h2>Reservá tu mesa</h2>
+                <div class="reserva-campos">
+                    <div class="campo">
+                        <label for="fecha-rapida">Fecha</label>
+                        <input type="date" id="fecha-rapida">
+                    </div>
+                    <div class="campo">
+                        <label for="personas-rapida">Personas</label>
+                        <input type="text" id="personas-rapida" size="4" maxlength="2" placeholder="Ej: 4">
+                    </div>
+                    <button type="button" class="boton" onclick="reservaRapida()">Reservar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <div class="pie-contenido">
+                <p>Humberto Primo 670, piso 34 · Córdoba</p>
+                <p>Desayunos y almuerzos · 8 a 15 hs</p>
+                <a href="https://www.instagram.com/34roof/" target="_blank" rel="noopener">Instagram @34roof</a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
