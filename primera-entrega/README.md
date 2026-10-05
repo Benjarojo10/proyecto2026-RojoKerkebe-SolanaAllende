@@ -44,13 +44,15 @@ aproximado de su pedido y reservar una mesa.
 ## Estructura del proyecto
 
 ```
-proyecto2026-RojoKerkebe-SolanaAllende/
+primera-entrega/
 ├── index.html
-├── /css
-├── /js
-├── /imagenes
-├── /Sketch
-├── /Wireframe
+├── style.css
+├── script.js
+├── imagenes/
+├── Sketch/
+├── Wireframe/
+├── Diagrama-Organizacion/
+├── Requerimientos.md
 └── README.md
 ```
 
