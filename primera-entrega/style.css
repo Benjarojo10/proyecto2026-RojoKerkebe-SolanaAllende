@@ -359,6 +359,17 @@ h2 {
     background-color: #ffffff;
 }
 
+.plato-foto {
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.plato-info {
+    flex: 1;
+}
+
 .plato h3 {
     margin: 0 0 4px;
     font-size: 1.1rem;
@@ -548,8 +559,11 @@ h2 {
     }
 
     .plato {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .plato-info {
+        flex-basis: calc(100% - 106px);
     }
 
     .plato-accion {
