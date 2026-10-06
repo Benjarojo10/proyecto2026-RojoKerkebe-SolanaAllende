@@ -205,3 +205,4 @@ const alternarCarrito = (boton) => {
     carrito.classList.toggle("abierto");
     boton.textContent = carrito.classList.contains("abierto") ? "Cerrar" : "Ver pedido";
 };
+/**
