@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Benjamin Rojo Kerkebe, Justo Solana Allende">
+    <meta name="description" content="Menú de 34 Roof: entradas, principales, postres y bebidas. Armá tu pedido y calculá el total de tu cuenta.">
+    <meta name="keywords" content="34 Roof, menú, carta, platos, desayunos, almuerzos, Córdoba">
+    <title>Menú | 34 Roof</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Tenor+Sans&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="mostrarPlatos()">
+    <div class="contenedor-pagina con-carrito">
+        <header class="encabezado">
+            <div class="encabezado-contenido">
+                <h1 class="marca">34 Roof</h1>
+                <button id="boton-menu" type="button" aria-label="Abrir menú de navegación" onclick="alternarMenu()">☰</button>
+                <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="menu.html" class="enlace-activo">Menú</a>
+                    <a href="reservas.html">Reservas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="menu-encabezado">
+                <h2>Nuestro menú</h2>
+                <p>Desayunos y almuerzos de 8 a 15 hs. Armá tu pedido y mirá cuánto sale tu cuenta.</p>
+            </section>
+
+            <div class="menu-layout">
+                <section class="menu-platos">
+                    <div class="buscador">
+                        <label for="buscador">Buscar plato</label>
+                        <div class="buscador-fila">
+                            <input type="text" id="buscador" size="30" maxlength="30" placeholder="Buscar plato (ej: ñoquis)" oninput="mostrarPlatos()">
+                            <button type="button" class="boton" onclick="mostrarPlatos()">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="pestanas">
+                        <button type="button" class="pestana activa" onclick="cambiarCategoria('entradas', this)">Entradas</button>
+                        <button type="button" class="pestana" onclick="cambiarCategoria('principales', this)">Principales</button>
+                        <button type="button" class="pestana" onclick="cambiarCategoria('postres', this)">Postres</button>
+                        <button type="button" class="pestana" onclick="cambiarCategoria('bebidas', this)">Bebidas</button>
+                    </div>
+
+                    <p id="mensaje-vacio" class="mensaje-vacio oculto">No encontramos ese plato en el menú.</p>
+
+                    <div id="lista-platos">
+                        <article class="plato" data-id="provoleta" data-categoria="entradas" data-nombre="Provoleta con tomates asados" data-precio="8500">
+                            <div class="plato-info">
+                                <h3>Provoleta con tomates asados</h3>
+                                <p>Queso provolone fundido con tomates asados y orégano.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$8.500</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                        <article class="plato" data-id="hummus" data-categoria="entradas" data-nombre="Hummus con pan de campo" data-precio="7800">
+                            <div class="plato-info">
+                                <h3>Hummus con pan de campo</h3>
+                                <p>Crema de garbanzos con aceite de oliva y pan tostado.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$7.800</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+
+                        <article class="plato" data-id="noquis" data-categoria="principales" data-nombre="Ñoquis de papa con salsa fileto" data-precio="14500">
+                            <div class="plato-info">
+                                <h3>Ñoquis de papa con salsa fileto</h3>
+                                <p>Ñoquis caseros con salsa de tomate y albahaca.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$14.500</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                        <article class="plato" data-id="ravioles" data-categoria="principales" data-nombre="Ravioles de ricota y espinaca" data-precio="15800">
+                            <div class="plato-info">
+                                <h3>Ravioles de ricota y espinaca</h3>
+                                <p>Ravioles rellenos con salsa de manteca y salvia.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$15.800</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                        <article class="plato" data-id="milanesa" data-categoria="principales" data-nombre="Milanesa de lomo con papas rústicas" data-precio="17500">
+                            <div class="plato-info">
+                                <h3>Milanesa de lomo con papas rústicas</h3>
+                                <p>Lomo empanado con papas al horno y limón.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$17.500</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+
+                        <article class="plato" data-id="flan" data-categoria="postres" data-nombre="Flan casero con dulce de leche" data-precio="6500">
+                            <div class="plato-info">
+                                <h3>Flan casero con dulce de leche</h3>
+                                <p>Flan de huevo con dulce de leche y crema.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$6.500</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                        <article class="plato" data-id="tiramisu" data-categoria="postres" data-nombre="Tiramisú" data-precio="7200">
+                            <div class="plato-info">
+                                <h3>Tiramisú</h3>
+                                <p>Bizcochos con café, mascarpone y cacao.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$7.200</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+
+                        <article class="plato" data-id="cafe" data-categoria="bebidas" data-nombre="Café doble" data-precio="3500">
+                            <div class="plato-info">
+                                <h3>Café doble</h3>
+                                <p>Café de especialidad, servido caliente.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$3.500</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                        <article class="plato" data-id="jugo" data-categoria="bebidas" data-nombre="Jugo de naranja exprimido" data-precio="4200">
+                            <div class="plato-info">
+                                <h3>Jugo de naranja exprimido</h3>
+                                <p>Naranjas exprimidas en el momento.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$4.200</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                        <article class="plato" data-id="limonada" data-categoria="bebidas" data-nombre="Limonada con menta y jengibre" data-precio="4500">
+                            <div class="plato-info">
+                                <h3>Limonada con menta y jengibre</h3>
+                                <p>Limonada fresca con hojas de menta y jengibre.</p>
+                            </div>
+                            <div class="plato-accion">
+                                <span class="precio">$4.500</span>
+                                <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <aside id="carrito" class="carrito">
+                    <div class="carrito-barra">
+                        <div>
+                            <span id="carrito-cantidad">0 items</span>
+                            <strong id="carrito-total-barra">Total: $0</strong>
+                        </div>
+                        <button type="button" class="boton" onclick="alternarCarrito(this)">Ver pedido</button>
+                    </div>
+                    <div class="carrito-detalle">
+                        <h2>Tu pedido</h2>
+                        <ul id="lista-pedido" class="lista-pedido"></ul>
+                        <p id="pedido-vacio" class="texto-vacio">Todavía no agregaste nada.</p>
+                        <div class="campo">
+                            <label for="propina">Propina</label>
+                            <select id="propina" onchange="actualizarPedido()">
+                                <option value="0">Sin propina</option>
+                                <option value="10">10%</option>
+                                <option value="15">15%</option>
+                            </select>
+                        </div>
+                        <p class="linea-total"><span>Subtotal</span><span id="subtotal">$0</span></p>
+                        <p class="linea-total"><span>Propina</span><span id="monto-propina">$0</span></p>
+                        <p class="linea-total total"><span>Total</span><span id="total">$0</span></p>
+                        <button type="button" class="boton-secundario" onclick="vaciarPedido()">Vaciar pedido</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="pie">
+            <div class="pie-contenido">
+                <p>Humberto Primo 670, piso 34 · Córdoba</p>
+                <p>Desayunos y almuerzos · 8 a 15 hs</p>
+                <a href="https://www.instagram.com/34roof/" target="_blank" rel="noopener">Instagram @34roof</a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
