@@ -205,4 +205,114 @@ const alternarCarrito = (boton) => {
     carrito.classList.toggle("abierto");
     boton.textContent = carrito.classList.contains("abierto") ? "Cerrar" : "Ver pedido";
 };
+
+const horariosCompletos = { 5: ["13:00", "13:30"] };
+
 /**
+ * Devuelve la fecha de hoy en formato aaaa-mm-dd, igual que el input de tipo fecha.
+ * @method obtenerFechaHoy
+ * @return {string} La fecha de hoy
+ */
+const obtenerFechaHoy = () => {
+    const ahora = new Date();
+    const mes = String(ahora.getMonth() + 1).padStart(2, "0");
+    const dia = String(ahora.getDate()).padStart(2, "0");
+    return `${ahora.getFullYear()}-${mes}-${dia}`;
+};
+
+/**
+ * Indica si hay turnos libres para una fecha y un horario.
+ * Como el sitio no tiene servidor, los viernes de 13:00 y 13:30 figuran completos a modo de ejemplo.
+ * @method hayDisponibilidad
+ * @param {string} fecha - Fecha elegida en formato aaaa-mm-dd
+ * @param {string} hora - Horario elegido en formato hh:mm
+ * @return {boolean} true si hay turnos libres, false si está completo
+ */
+const hayDisponibilidad = (fecha, hora) => {
+    const diaSemana = new Date(`${fecha}T00:00:00`).getDay();
+    const completos = horariosCompletos[diaSemana] || [];
+    return !completos.includes(hora);
+};
+
+/**
+ * Valida cada campo del formulario de reservas.
+ * Ante el primer dato incorrecto avisa con un alert y blanquea el campo.
+ * @method validarReserva
+ * @return {boolean} true si todos los datos son correctos, false si alguno no lo es
+ */
+const validarReserva = () => {
+    const campoNombre = document.getElementById("nombre");
+    const campoTelefono = document.getElementById("telefono");
+    const campoFecha = document.getElementById("fecha");
+    const campoHora = document.getElementById("hora");
+    const campoPersonas = document.getElementById("personas");
+    const personas = Number(campoPersonas.value);
+    const ahora = new Date();
+    const horaActual = `${String(ahora.getHours()).padStart(2, "0")}:${String(ahora.getMinutes()).padStart(2, "0")}`;
+
+    if (!/^[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,}$/.test(campoNombre.value.trim())) {
+        alert("Ingresá un nombre válido, solo con letras.");
+        campoNombre.value = "";
+        return false;
+    }
+
+    if (!/^\d{8,15}$/.test(campoTelefono.value.trim())) {
+        alert("Ingresá un teléfono válido, solo números (entre 8 y 15 dígitos).");
+        campoTelefono.value = "";
+        return false;
+    }
+
+    if (campoFecha.value === "" || campoFecha.value < obtenerFechaHoy()) {
+        alert("Ingresá una fecha válida, desde hoy en adelante.");
+        campoFecha.value = "";
+        return false;
+    }
+
+    if (campoHora.value === "") {
+        alert("Elegí un horario para tu reserva.");
+        return false;
+    }
+
+    if (campoFecha.value === obtenerFechaHoy() && campoHora.value <= horaActual) {
+        alert("Ese horario ya pasó. Elegí uno más tarde.");
+        campoHora.value = "";
+        return false;
+    }
+
+    if (!Number.isInteger(personas) || personas < 1 || personas > 12) {
+        alert("Ingresá una cantidad de personas entre 1 y 12.");
+        campoPersonas.value = "";
+        return false;
+    }
+
+    return true;
+};
+
+/**
+ * Confirma la reserva: valida los datos, comprueba la disponibilidad y muestra un resumen.
+ * @method confirmarReserva
+ * @return {void}
+ */
+const confirmarReserva = () => {
+    if (!validarReserva()) {
+        return;
+    }
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+    const personas = Number(document.getElementById("personas").value);
+
+    if (!hayDisponibilidad(fecha, hora)) {
+        alert("Sin turnos para esa fecha y horario. Probá con otro.");
+        document.getElementById("hora").value = "";
+        return;
+    }
+
+    const fechaLegible = fecha.split("-").reverse().join("/");
+    const mensaje = document.getElementById("mensaje-reserva");
+    mensaje.textContent = `¡Listo, ${nombre}! Reservamos tu mesa para ${personas === 1 ? "1 persona" : `${personas} personas`} el ${fechaLegible} a las ${hora}. Te vamos a llamar al ${telefono} para confirmar.`;
+    mensaje.classList.remove("oculto");
+    document.getElementById("formulario-reserva").reset();
+};
