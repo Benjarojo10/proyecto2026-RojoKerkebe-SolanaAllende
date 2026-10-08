@@ -618,3 +618,78 @@ h2 {
         display: block;
     }
 }
+
+.reserva-completa {
+    max-width: 560px;
+    margin: 48px auto;
+    padding: 0 24px;
+}
+
+.reserva-completa h2 {
+    margin: 0 0 8px;
+    text-align: center;
+    color: var(--verde-musgo);
+}
+
+.reserva-subtitulo {
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.formulario-reserva {
+    padding: 28px;
+    border: 1px solid var(--beige);
+    background-color: #ffffff;
+}
+
+.formulario-reserva .campo {
+    margin-bottom: 18px;
+}
+
+.formulario-reserva .campo input,
+.formulario-reserva .campo select {
+    width: 100%;
+}
+
+.fila-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.nota-campos {
+    margin: 0 0 18px;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.formulario-reserva .boton {
+    width: 100%;
+    border-color: var(--verde-musgo);
+    background-color: var(--verde-musgo);
+    color: var(--beige);
+}
+
+.formulario-reserva .boton:hover {
+    border-color: var(--verde-oliva);
+    background-color: var(--verde-oliva);
+}
+
+.mensaje-reserva {
+    margin-top: 20px;
+    padding: 16px;
+    border-left: 4px solid var(--verde-musgo);
+    background-color: var(--beige);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .fila-doble {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .formulario-reserva {
+        padding: 20px;
+    }
+}
