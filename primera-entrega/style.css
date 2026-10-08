@@ -693,3 +693,36 @@ h2 {
         padding: 20px;
     }
 }
+
+.bloque-texto {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+}
+
+.bloque-texto h2 {
+    margin: 0 0 12px;
+    color: var(--verde-musgo);
+}
+
+.materiales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.materiales li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    border-left: 4px solid var(--verde-oliva);
+    background-color: #ffffff;
+}
+
+.materiales strong {
+    color: var(--chocolate);
+}
