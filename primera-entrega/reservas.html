@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Benjamin Rojo Kerkebe, Justo Solana Allende">
+    <meta name="description" content="Reservá tu mesa en 34 Roof, el mirador 360° en el piso 34. Desayunos y almuerzos de 8 a 15 hs.">
+    <meta name="keywords" content="34 Roof, reservas, reservar mesa, restaurante, Córdoba, mirador">
+    <title>Reservas | 34 Roof</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Tenor+Sans&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-pagina">
+        <header class="encabezado">
+            <div class="encabezado-contenido">
+                <h1 class="marca">34 Roof</h1>
+                <button id="boton-menu" type="button" aria-label="Abrir menú de navegación" onclick="alternarMenu()">☰</button>
+                <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="reservas.html" class="enlace-activo">Reservas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="reserva-completa">
+                <h2>Reservá tu mesa</h2>
+                <p class="reserva-subtitulo">Desayunos y almuerzos de 8 a 15 hs · Cupos limitados por franja horaria.</p>
+
+                <form id="formulario-reserva" class="formulario-reserva" onsubmit="confirmarReserva(); return false;">
+                    <p class="nota-campos">Todos los campos son obligatorios.</p>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" size="30" maxlength="40" placeholder="Ej: Ana Pérez">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" size="15" maxlength="15" placeholder="Ej: 3511234567">
+                    </div>
+
+                    <div class="fila-doble">
+                        <div class="campo">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha">
+                        </div>
+                        <div class="campo">
+                            <label for="hora">Hora</label>
+                            <select id="hora">
+                                <option value="">Elegí un horario</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="08:30">08:30</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="09:30">09:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="personas">Cantidad de personas</label>
+                        <input type="text" id="personas" size="4" maxlength="2" placeholder="Ej: 4">
+                    </div>
+
+                    <button type="submit" class="boton">Confirmar reserva</button>
+
+                    <p id="mensaje-reserva" class="mensaje-reserva oculto"></p>
+                </form>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <div class="pie-contenido">
+                <p>Humberto Primo 670, piso 34 · Córdoba</p>
+                <p>Desayunos y almuerzos · 8 a 15 hs</p>
+                <a href="https://www.instagram.com/34roof/" target="_blank" rel="noopener">Instagram @34roof</a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
