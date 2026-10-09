@@ -46,6 +46,10 @@ aproximado de su pedido y reservar una mesa.
 ```
 primera-entrega/
 ├── index.html
+├── menu.html
+├── reservas.html
+├── sobre-nosotros.html
+├── contacto.html
 ├── style.css
 ├── script.js
 ├── imagenes/
@@ -58,13 +62,13 @@ primera-entrega/
 
 ## Cómo ver el sitio
 
-**Sitio publicado:** *(pendiente — se agrega el link una vez deployado en GitHub Pages)*
+**Sitio publicado:** https://benjarojo10.github.io/proyecto2026-RojoKerkebe-SolanaAllende/primera-entrega/
 
 ## Estado actual
 
 - [x] Diagrama de organización
 - [x] Sketch (versión desktop y mobile)
 - [x] Wireframe (versión desktop y mobile, incluye buscador y carrito en Menú)
-- [ ] Maquetado HTML + CSS
-- [ ] Funcionalidad JavaScript
-- [ ] Deploy en GitHub Pages
+- [x] Maquetado HTML + CSS
+- [x] Funcionalidad JavaScript
+- [x] Deploy en GitHub Pages
