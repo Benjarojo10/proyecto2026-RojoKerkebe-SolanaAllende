@@ -294,6 +294,8 @@ const validarReserva = () => {
  * @return {void}
  */
 const confirmarReserva = () => {
+    document.getElementById("mensaje-reserva").classList.add("oculto");
+
     if (!validarReserva()) {
         return;
     }
