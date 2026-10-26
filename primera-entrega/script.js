@@ -9,6 +9,7 @@ const alternarMenu = () => {
 };
 
 const pedido = {};
+const MAX_UNIDADES = 10;
 let categoriaActiva = "entradas";
 
 /**
@@ -123,6 +124,11 @@ const agregarAlPedido = (boton) => {
     const plato = boton.closest(".plato");
     const id = plato.dataset.id;
 
+    if (pedido[id] && pedido[id].cantidad >= MAX_UNIDADES) {
+        alert(`Podés agregar hasta ${MAX_UNIDADES} unidades por producto.`);
+        return;
+    }
+
     if (pedido[id]) {
         pedido[id].cantidad += 1;
     } else {
@@ -144,6 +150,15 @@ const agregarAlPedido = (boton) => {
  * @return {void}
  */
 const cambiarCantidad = (id, cambio) => {
+    if (!pedido[id]) {
+        return;
+    }
+
+    if (pedido[id].cantidad + cambio > MAX_UNIDADES) {
+        alert(`Podés agregar hasta ${MAX_UNIDADES} unidades por producto.`);
+        return;
+    }
+
     pedido[id].cantidad += cambio;
 
     if (pedido[id].cantidad <= 0) {
