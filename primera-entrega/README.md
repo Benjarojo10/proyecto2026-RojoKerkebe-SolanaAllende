@@ -11,6 +11,7 @@ Sitio web para un restaurante ubicado en el piso 34, con vista panorámica de C�
 - [Tecnologías utilizadas](#tecnologías-utilizadas)
 - [Estructura del proyecto](#estructura-del-proyecto)
 - [Cómo ver el sitio](#cómo-ver-el-sitio)
+- [Abrir el proyecto localmente](#abrir-el-proyecto-localmente)
 - [Estado actual](#estado-actual)
 
 ## Descripción
@@ -62,7 +63,11 @@ primera-entrega/
 
 ## Cómo ver el sitio
 
-**Sitio publicado:** https://benjarojo10.github.io/proyecto2026-RojoKerkebe-SolanaAllende/primera-entrega/
+**Sitio publicado:** [Visitar 34 Roof](https://benjarojo10.github.io/proyecto2026-RojoKerkebe-SolanaAllende/primera-entrega/)
+
+### Abrir el proyecto localmente
+
+Abrí [la página de inicio](index.html) en tu navegador.
 
 ## Estado actual
 
