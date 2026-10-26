@@ -66,6 +66,7 @@
                                 <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
                             </div>
                         </article>
+
                         <article class="plato" data-id="hummus" data-categoria="entradas" data-nombre="Hummus con pan pita" data-precio="7800">
                             <img class="plato-foto" src="imagenes/hummus.jpg" alt="Hummus con pan pita y garbanzos">
                             <div class="plato-info">
@@ -89,6 +90,7 @@
                                 <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
                             </div>
                         </article>
+
                         <article class="plato" data-id="ravioles" data-categoria="principales" data-nombre="Ravioles con manteca y panceta" data-precio="15800">
                             <img class="plato-foto" src="imagenes/ravioles.jpg" alt="Ravioles con panceta y perejil">
                             <div class="plato-info">
@@ -100,6 +102,7 @@
                                 <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
                             </div>
                         </article>
+
                         <article class="plato" data-id="milanesa" data-categoria="principales" data-nombre="Milanesa crocante con limón y pepinillos" data-precio="17500">
                             <img class="plato-foto" src="imagenes/milanesa.jpg" alt="Milanesas con limón y pepinillos">
                             <div class="plato-info">
@@ -123,6 +126,7 @@
                                 <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
                             </div>
                         </article>
+
                         <article class="plato" data-id="tiramisu" data-categoria="postres" data-nombre="Tiramisú" data-precio="7200">
                             <img class="plato-foto" src="imagenes/tiramisu.jpg" alt="Porción de tiramisú con cacao">
                             <div class="plato-info">
@@ -146,6 +150,7 @@
                                 <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
                             </div>
                         </article>
+
                         <article class="plato" data-id="jugo" data-categoria="bebidas" data-nombre="Jugo de naranja exprimido" data-precio="4200">
                             <img class="plato-foto" src="imagenes/jugo-naranja.jpg" alt="Vaso de jugo de naranja exprimido">
                             <div class="plato-info">
@@ -157,6 +162,7 @@
                                 <button type="button" class="boton" onclick="agregarAlPedido(this)">+ Agregar</button>
                             </div>
                         </article>
+
                         <article class="plato" data-id="limonada" data-categoria="bebidas" data-nombre="Limonada con pepino y albahaca" data-precio="4500">
                             <img class="plato-foto" src="imagenes/limonada.jpg" alt="Limonada con pepino, limón y albahaca">
                             <div class="plato-info">
@@ -174,15 +180,17 @@
                 <aside id="carrito" class="carrito">
                     <div class="carrito-barra">
                         <div>
-                            <span id="carrito-cantidad">0 items</span>
+                            <span id="carrito-cantidad">0 ítems</span>
                             <strong id="carrito-total-barra">Total: $0</strong>
                         </div>
                         <button type="button" class="boton" onclick="alternarCarrito(this)">Ver pedido</button>
                     </div>
+
                     <div class="carrito-detalle">
                         <h2>Tu pedido</h2>
                         <ul id="lista-pedido" class="lista-pedido"></ul>
                         <p id="pedido-vacio" class="texto-vacio">Todavía no agregaste nada.</p>
+
                         <div class="campo">
                             <label for="propina">Propina</label>
                             <select id="propina" onchange="actualizarPedido()">
@@ -191,9 +199,20 @@
                                 <option value="15">15%</option>
                             </select>
                         </div>
-                        <p class="linea-total"><span>Subtotal</span><span id="subtotal">$0</span></p>
-                        <p class="linea-total"><span>Propina</span><span id="monto-propina">$0</span></p>
-                        <p class="linea-total total"><span>Total</span><span id="total">$0</span></p>
+
+                        <p class="linea-total">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0</span>
+                        </p>
+                        <p class="linea-total">
+                            <span>Propina</span>
+                            <span id="monto-propina">$0</span>
+                        </p>
+                        <p class="linea-total total">
+                            <span>Total</span>
+                            <span id="total">$0</span>
+                        </p>
+
                         <button type="button" class="boton-secundario" onclick="vaciarPedido()">Vaciar pedido</button>
                     </div>
                 </aside>

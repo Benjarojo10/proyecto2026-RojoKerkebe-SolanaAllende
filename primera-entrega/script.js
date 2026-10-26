@@ -69,7 +69,7 @@ const cambiarCategoria = (categoria, boton) => {
 };
 
 /**
- * Calcula la cantidad de items, el subtotal, la propina y el total del pedido.
+ * Calcula la cantidad de ítems, el subtotal, la propina y el total del pedido.
  * @method calcularTotales
  * @return {{cantidad: number, subtotal: number, propina: number, total: number}} Totales del pedido
  */
@@ -110,7 +110,7 @@ const actualizarPedido = () => {
     document.getElementById("subtotal").textContent = formatearPrecio(totales.subtotal);
     document.getElementById("monto-propina").textContent = formatearPrecio(totales.propina);
     document.getElementById("total").textContent = formatearPrecio(totales.total);
-    document.getElementById("carrito-cantidad").textContent = totales.cantidad === 1 ? "1 item" : `${totales.cantidad} items`;
+    document.getElementById("carrito-cantidad").textContent = totales.cantidad === 1 ? "1 ítem" : `${totales.cantidad} ítems`;
     document.getElementById("carrito-total-barra").textContent = `Total: ${formatearPrecio(totales.total)}`;
 };
 
