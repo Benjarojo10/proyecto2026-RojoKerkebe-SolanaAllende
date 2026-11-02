@@ -1,0 +1,104 @@
+@use "variables" as *;
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--verde-musgo);
+    color: var(--beige);
+}
+
+.encabezado-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.marca {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.navegacion {
+    display: flex;
+    gap: 28px;
+}
+
+.navegacion a {
+    color: var(--beige);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navegacion a:hover,
+.navegacion a:focus {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.enlace-activo {
+    border-bottom: 2px solid var(--beige);
+}
+
+#boton-menu {
+    display: none;
+    padding: 4px 12px;
+    border: 1px solid var(--beige);
+    background: none;
+    color: var(--beige);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#boton-menu:hover {
+    background-color: var(--verde-oliva);
+}
+
+.pie {
+    padding: 32px 24px;
+    background-color: var(--gris-oscuro);
+    color: var(--beige);
+    text-align: center;
+}
+
+.pie p {
+    margin: 4px 0;
+}
+
+.pie a {
+    color: var(--beige);
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: $punto-corte-movil) {
+    .encabezado-contenido {
+            flex-wrap: wrap;
+        }
+
+    #boton-menu {
+            display: block;
+        }
+
+    .navegacion {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            width: 100%;
+            padding-bottom: 12px;
+        }
+
+    .navegacion.abierta {
+            display: flex;
+        }
+
+    .navegacion a {
+            padding: 10px 0;
+        }
+}

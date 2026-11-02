@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    color: var(--gris-oscuro);
+    background-color: var(--gris-claro);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid var(--beige);
+    background-color: var(--beige);
+    color: var(--gris-oscuro);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--beige);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.campo input {
+    padding: 10px;
+    border: 1px solid var(--gris-oscuro);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus {
+    outline: 2px solid var(--verde-oliva);
+}
+
+.campo select {
+    padding: 10px;
+    border: 1px solid var(--gris-oscuro);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.boton-secundario {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid var(--gris-oscuro);
+    background: none;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton-secundario:hover {
+    background-color: var(--gris-claro);
+}
+
+.oculto {
+    display: none;
+}
+
+.mensaje-error {
+    margin: 4px 0 0;
+    color: #9b2c2c;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
