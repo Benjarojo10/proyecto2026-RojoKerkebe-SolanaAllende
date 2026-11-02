@@ -27,6 +27,8 @@ aproximado de su pedido y reservar una mesa.
 
 ## Contenido de la página
 
+### Páginas del sitio
+
 - **Inicio**: presentación del restaurante, imagen destacada y accesos rápidos.
 - **Sobre nosotros**: historia y concepto del lugar.
 - **Menú**: listado de platos por categoría, con buscador y carrito para calcular el total del pedido.
@@ -45,20 +47,22 @@ aproximado de su pedido y reservar una mesa.
 ## Estructura del proyecto
 
 ```
-primera-entrega/
-├── index.html
-├── menu.html
-├── reservas.html
-├── sobre-nosotros.html
-├── contacto.html
-├── style.css
-├── script.js
-├── imagenes/
-├── Sketch/
-├── Wireframe/
-├── Diagrama-Organizacion/
-├── Requerimientos.md
-└── README.md
+proyecto2026-RojoKerkebe-SolanaAllende/
+├── README.md
+├── primera-entrega/
+│   ├── index.html
+│   ├── menu.html
+│   ├── reservas.html
+│   ├── sobre-nosotros.html
+│   ├── contacto.html
+│   ├── style.css
+│   ├── script.js
+│   ├── imagenes/
+│   ├── Sketch/
+│   ├── Wireframe/
+│   ├── Diagrama-Organizacion/
+│   └── Requerimientos.md
+└── segunda-entrega/
 ```
 
 ## Cómo ver el sitio
@@ -67,7 +71,7 @@ primera-entrega/
 
 ### Abrir el proyecto localmente
 
-Abrí [la página de inicio](index.html) en tu navegador.
+Abrí [la página de inicio](primera-entrega/index.html) en tu navegador.
 
 ## Estado actual
 
