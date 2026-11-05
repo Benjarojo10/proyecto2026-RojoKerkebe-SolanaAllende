@@ -1,0 +1,105 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Provoleta a la parrilla con orégano",
+      "description": "Queso provolone grillado con orégano y ají molido.",
+      "categoria": "entradas",
+      "marca": "34 Roof",
+      "precio": 8500,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "provoleta.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Hummus con pan pita",
+      "description": "Crema de garbanzos con aceite de oliva, pimentón y pan pita.",
+      "categoria": "entradas",
+      "marca": "34 Roof",
+      "precio": 7800,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "hummus.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Ñoquis de papa con salsa boloñesa",
+      "description": "Ñoquis caseros con salsa de tomate, carne y albahaca.",
+      "categoria": "principales",
+      "marca": "34 Roof",
+      "precio": 14500,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "noquis.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Ravioles con manteca y panceta",
+      "description": "Ravioles rellenos con manteca, panceta crocante y perejil.",
+      "categoria": "principales",
+      "marca": "34 Roof",
+      "precio": 15800,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "ravioles.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Milanesa crocante con limón y pepinillos",
+      "description": "Milanesa dorada con rodajas de limón y pepinillos en vinagre.",
+      "categoria": "principales",
+      "marca": "34 Roof",
+      "precio": 17500,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "milanesa.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Flan casero con caramelo",
+      "description": "Flan de huevo con caramelo líquido.",
+      "categoria": "postres",
+      "marca": "34 Roof",
+      "precio": 6500,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "flan.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Tiramisú",
+      "description": "Bizcochos con café, mascarpone y cacao.",
+      "categoria": "postres",
+      "marca": "34 Roof",
+      "precio": 7200,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "tiramisu.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Café doble",
+      "description": "Café de especialidad, servido caliente.",
+      "categoria": "bebidas",
+      "marca": "34 Roof",
+      "precio": 3500,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "cafe.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Jugo de naranja exprimido",
+      "description": "Naranjas exprimidas en el momento.",
+      "categoria": "bebidas",
+      "marca": "34 Roof",
+      "precio": 4200,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "jugo-naranja.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Limonada con pepino y albahaca",
+      "description": "Limonada fresca con pepino, limón y albahaca.",
+      "categoria": "bebidas",
+      "marca": "34 Roof",
+      "precio": 4500,
+      "web": "https://www.instagram.com/34roof/",
+      "imagen": "limonada.jpg"
+    }
+  ],
+  "reservas": []
+}
