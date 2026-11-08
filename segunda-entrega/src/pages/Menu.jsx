@@ -3,7 +3,7 @@ import { obtenerProductos } from "@api/productos.js";
 import Carrito from "@components/Carrito.jsx";
 import Input from "@components/Input.jsx";
 import Plato from "@components/Plato.jsx";
-import { categorias } from "@data/categorias.js";
+import { obtenerCategorias } from "@api/categorias.js";
 import { normalizar } from "@utils/formato.js";
 
 const MAXIMO_POR_PRODUCTO = 10;
@@ -18,6 +18,7 @@ const leerPedidoGuardado = () => {
 
 const Menu = () => {
     const [productos, setProductos] = useState([]);
+    const [categorias, setCategorias] = useState([]);
     const [error, setError] = useState("");
     const [busqueda, setBusqueda] = useState("");
     const [categoria, setCategoria] = useState("entradas");
@@ -26,6 +27,7 @@ const Menu = () => {
     useEffect(() => {
         const cargar = async () => {
             try {
+                setCategorias(await obtenerCategorias());
                 setProductos(await obtenerProductos());
             } catch {
                 setError("No pudimos cargar el menú. Revisá que el servidor esté encendido (npm run api).");
