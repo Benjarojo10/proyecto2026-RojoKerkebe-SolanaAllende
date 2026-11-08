@@ -1,17 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { crearReserva, obtenerReservas } from "@api/reservas.js";
 import Boton from "@components/Boton.jsx";
 import Input from "@components/Input.jsx";
-import { horarios, MAXIMO_RESERVAS_POR_HORARIO } from "@data/horarios.js";
+import { obtenerHorarios } from "@api/horarios.js";
 import { obtenerFechaHoy, validarCampo } from "@utils/validaciones.js";
+
+const MAXIMO_RESERVAS_POR_HORARIO = 3;
 
 const campoVacio = { nombre: "", telefono: "", fecha: "", hora: "", personas: "" };
 
 const Reservas = () => {
+    const [horarios, setHorarios] = useState([]);
+    const [errorHorarios, setErrorHorarios] = useState("");
     const [datos, setDatos] = useState(campoVacio);
     const [errores, setErrores] = useState(campoVacio);
     const [mensaje, setMensaje] = useState("");
     const [errorGeneral, setErrorGeneral] = useState("");
+
+    useEffect(() => {
+        /** Carga los horarios disponibles desde la API. */
+        const cargar = async () => {
+            try {
+                setHorarios(await obtenerHorarios());
+            } catch {
+                setErrorHorarios("No pudimos cargar los horarios. Intentá nuevamente más tarde.");
+            }
+        };
+        cargar();
+    }, []);
 
     const cambiar = (evento) => {
         const { id, value } = evento.target;
@@ -112,9 +128,9 @@ const Reservas = () => {
                             aria-describedby={errores.hora ? "hora-error" : undefined}
                         >
                             <option value="">Elegí un horario</option>
-                            {horarios.map((horario) => (
-                                <option key={horario} value={horario}>
-                                    {horario}
+                            {horarios.map(({ id, hora }) => (
+                                <option key={id} value={hora}>
+                                    {hora}
                                 </option>
                             ))}
                         </select>
@@ -139,6 +155,7 @@ const Reservas = () => {
 
                 <Boton tipo="submit">Confirmar reserva</Boton>
 
+                {errorHorarios && <p className="mensaje-error" role="alert">{errorHorarios}</p>}
                 {errorGeneral && <p className="mensaje-error" role="alert">{errorGeneral}</p>}
                 {mensaje && <p className="mensaje-reserva" role="status">{mensaje}</p>}
             </form>
