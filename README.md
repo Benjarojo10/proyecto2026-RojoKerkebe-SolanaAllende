@@ -37,12 +37,19 @@ aproximado de su pedido y reservar una mesa.
 
 ## Tecnologías utilizadas
 
-| Tecnología     | Uso                                                         |
-|----------------|--------------------------------------------------------------|
-| HTML5          | Estructura semántica de las páginas                          |
-| CSS3           | Estilos, layout responsive (desktop / mobile)                |
-| JavaScript     | Buscador del menú, cálculo del carrito, validación de formularios |
-| GitHub Pages   | Publicación del sitio                                        |
+| Tecnología | Uso |
+|------------|-----|
+| HTML5 | Estructura de las páginas |
+| CSS3 | Estilos de la primera entrega |
+| JavaScript | Buscador, cálculo del carrito y validación de formularios |
+| React | Componentes y Hooks de la segunda entrega |
+| React Router DOM | Navegación entre páginas |
+| Vite | Desarrollo y compilación del proyecto React |
+| Sass (SCSS) | Estilos de la segunda entrega |
+| json-server | API simulada de productos y reservas |
+| Fetch API | Consultas y envío de datos a la API |
+| localStorage | Guardado del carrito en el navegador |
+| GitHub Pages | Publicación de la primera entrega |
 
 ## Estructura del proyecto
 
