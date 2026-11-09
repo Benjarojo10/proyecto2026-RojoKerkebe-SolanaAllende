@@ -8,6 +8,11 @@ import { normalizar } from "@utils/formato.js";
 
 const MAXIMO_POR_PRODUCTO = 10;
 
+/**
+ * Lee el pedido guardado en localStorage.
+ * @method leerPedidoGuardado
+ * @return {Object} El pedido guardado, o un objeto vacío si no hay o no se puede leer
+ */
 const leerPedidoGuardado = () => {
     try {
         return JSON.parse(localStorage.getItem("pedido")) ?? {};
@@ -16,6 +21,11 @@ const leerPedidoGuardado = () => {
     }
 };
 
+/**
+ * Página del menú con buscador, categorías, platos y carrito. Guarda el pedido en localStorage.
+ * @method Menu
+ * @return {JSX.Element} La página del menú
+ */
 const Menu = () => {
     const [productos, setProductos] = useState([]);
     const [categorias, setCategorias] = useState([]);
@@ -25,6 +35,11 @@ const Menu = () => {
     const [pedido, setPedido] = useState(leerPedidoGuardado);
 
     useEffect(() => {
+        /**
+         * Carga las categorías y los productos desde la API, o muestra un error si el servidor no responde.
+         * @method cargar
+         * @return {Promise<void>}
+         */
         const cargar = async () => {
             try {
                 setCategorias(await obtenerCategorias());
@@ -47,6 +62,13 @@ const Menu = () => {
         return coincideTexto && coincideCategoria;
     });
 
+    /**
+     * Suma o resta unidades de un plato del pedido. Si llega a cero lo quita y no permite superar el máximo por producto.
+     * @method cambiarCantidad
+     * @param {number|string} id - Identificador del plato
+     * @param {number} cambio - 1 para sumar una unidad, -1 para restar una
+     * @return {void}
+     */
     const cambiarCantidad = (id, cambio) => {
         const actual = pedido[id];
 
@@ -65,6 +87,12 @@ const Menu = () => {
         setPedido(nuevoPedido);
     };
 
+    /**
+     * Agrega un plato al pedido, o suma una unidad si ya estaba.
+     * @method agregar
+     * @param {Object} producto - Producto elegido del menú
+     * @return {void}
+     */
     const agregar = (producto) => {
         if (pedido[producto.id]) {
             cambiarCantidad(producto.id, 1);

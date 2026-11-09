@@ -14,6 +14,11 @@ const materiales = [
     { nombre: "Cemento", detalle: "Barras y pisos de acabado artesanal." }
 ];
 
+/**
+ * Página con el concepto del restaurante, sus materiales y lo que ofrece.
+ * @method SobreNosotros
+ * @return {JSX.Element} La página sobre nosotros
+ */
 const SobreNosotros = () => {
     const navigate = useNavigate();
 

@@ -9,6 +9,11 @@ const MAXIMO_RESERVAS_POR_HORARIO = 3;
 
 const campoVacio = { nombre: "", telefono: "", fecha: "", hora: "", personas: "" };
 
+/**
+ * Página con el formulario para reservar una mesa, con validaciones en tiempo real.
+ * @method Reservas
+ * @return {JSX.Element} La página de reservas
+ */
 const Reservas = () => {
     const [horarios, setHorarios] = useState([]);
     const [errorHorarios, setErrorHorarios] = useState("");
@@ -18,7 +23,11 @@ const Reservas = () => {
     const [errorGeneral, setErrorGeneral] = useState("");
 
     useEffect(() => {
-        /** Carga los horarios disponibles desde la API. */
+        /**
+         * Carga los horarios disponibles desde la API, o muestra un error si el servidor no responde.
+         * @method cargar
+         * @return {Promise<void>}
+         */
         const cargar = async () => {
             try {
                 setHorarios(await obtenerHorarios());
@@ -29,6 +38,12 @@ const Reservas = () => {
         cargar();
     }, []);
 
+    /**
+     * Actualiza el valor de un campo y lo valida mientras el usuario escribe.
+     * @method cambiar
+     * @param {Event} evento - Evento de cambio del campo
+     * @return {void}
+     */
     const cambiar = (evento) => {
         const { id, value } = evento.target;
         setDatos({ ...datos, [id]: value });
@@ -37,6 +52,12 @@ const Reservas = () => {
         setErrorGeneral("");
     };
 
+    /**
+     * Valida todos los campos, comprueba la disponibilidad del horario y guarda la reserva en la API.
+     * @method confirmar
+     * @param {Event} evento - Evento de envío del formulario
+     * @return {Promise<void>}
+     */
     const confirmar = async (evento) => {
         evento.preventDefault();
         setMensaje("");

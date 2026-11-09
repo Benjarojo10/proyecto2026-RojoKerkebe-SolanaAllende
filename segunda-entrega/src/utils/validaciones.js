@@ -1,3 +1,8 @@
+/**
+ * Devuelve la fecha de hoy en formato aaaa-mm-dd, igual que el input de tipo fecha.
+ * @method obtenerFechaHoy
+ * @return {string} La fecha de hoy
+ */
 export const obtenerFechaHoy = () => {
     const ahora = new Date();
     const mes = String(ahora.getMonth() + 1).padStart(2, "0");
@@ -5,6 +10,13 @@ export const obtenerFechaHoy = () => {
     return `${ahora.getFullYear()}-${mes}-${dia}`;
 };
 
+/**
+ * Valida el valor de un campo del formulario de reservas.
+ * @method validarCampo
+ * @param {string} campo - Identificador del campo: nombre, telefono, fecha, hora o personas
+ * @param {string} valor - Valor ingresado por el usuario
+ * @return {string} El mensaje de error, o un texto vacío si el valor es correcto
+ */
 export const validarCampo = (campo, valor) => {
     switch (campo) {
         case "nombre":
