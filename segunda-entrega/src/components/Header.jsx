@@ -9,6 +9,11 @@ const enlaces = [
     { ruta: "/contacto", texto: "Contacto" }
 ];
 
+/**
+ * Cabecera con el título del sitio y la navegación. En pantallas chicas el menú se abre y se cierra con un botón.
+ * @method Header
+ * @return {JSX.Element} La cabecera
+ */
 const Header = () => {
     const [abierta, setAbierta] = useState(false);
 

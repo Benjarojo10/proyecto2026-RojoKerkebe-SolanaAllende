@@ -1,6 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Boton from "@components/Boton.jsx";
 
+/**
+ * Página de contacto con la dirección, los horarios, los medios de contacto y el mapa.
+ * @method Contacto
+ * @return {JSX.Element} La página de contacto
+ */
 const Contacto = () => {
     const navigate = useNavigate();
 

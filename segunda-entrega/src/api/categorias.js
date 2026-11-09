@@ -2,7 +2,8 @@ const URL_API = "http://localhost:3001";
 
 /**
  * Consulta las categorías del menú en la API.
- * @returns {Promise<Array>} Lista de categorias.
+ * @method obtenerCategorias
+ * @return {Promise<Array>} Lista de categorías
  */
 export const obtenerCategorias = async () => {
     const respuesta = await fetch(`${URL_API}/categorias`);

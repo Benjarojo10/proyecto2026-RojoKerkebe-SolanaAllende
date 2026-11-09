@@ -6,6 +6,11 @@ import salon from "@assets/salon-sillones-ventanales.jpg";
 import chef from "@assets/chef-emplatando-pasta.jpg";
 import pasillo from "@assets/pasillo-ventanales-ciudad.jpg";
 
+/**
+ * Página de inicio con la imagen principal, los accesos rápidos y la invitación a reservar.
+ * @method Inicio
+ * @return {JSX.Element} La página de inicio
+ */
 const Inicio = () => {
     const navigate = useNavigate();
 

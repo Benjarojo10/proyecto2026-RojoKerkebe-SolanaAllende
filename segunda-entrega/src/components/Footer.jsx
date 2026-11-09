@@ -1,3 +1,8 @@
+/**
+ * Pie de página con el logo, la dirección, los horarios y el enlace a Instagram.
+ * @method Footer
+ * @return {JSX.Element} El pie de página
+ */
 const Footer = () => (
     <footer className="pie">
         <div className="pie-contenido">

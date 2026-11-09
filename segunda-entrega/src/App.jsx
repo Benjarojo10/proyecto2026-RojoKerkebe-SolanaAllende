@@ -6,6 +6,11 @@ import Menu from "@pages/Menu.jsx";
 import Reservas from "@pages/Reservas.jsx";
 import Contacto from "@pages/Contacto.jsx";
 
+/**
+ * Define las rutas del sitio. Todas las páginas se muestran dentro del diseño común.
+ * @method App
+ * @return {JSX.Element} Las rutas de la aplicación
+ */
 const App = () => (
     <Routes>
         <Route path="/" element={<Layout />}>

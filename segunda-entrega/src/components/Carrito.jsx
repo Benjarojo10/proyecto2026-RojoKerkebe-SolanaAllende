@@ -2,6 +2,15 @@ import { useState } from "react";
 import Boton from "@components/Boton.jsx";
 import { formatearPrecio } from "@utils/formato.js";
 
+/**
+ * Muestra el pedido, permite elegir la propina y calcula el subtotal y el total.
+ * @method Carrito
+ * @param {Object} props - Propiedades del carrito
+ * @param {Object} props.pedido - Platos elegidos, indexados por id
+ * @param {Function} props.onCambiar - Función que suma o resta unidades de un plato
+ * @param {Function} props.onVaciar - Función que elimina todos los platos del pedido
+ * @return {JSX.Element} El carrito
+ */
 const Carrito = ({ pedido, onCambiar, onVaciar }) => {
     const [abierto, setAbierto] = useState(false);
     const [propina, setPropina] = useState(0);
