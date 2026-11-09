@@ -70,6 +70,19 @@ proyecto2026-RojoKerkebe-SolanaAllende/
 │   ├── Diagrama-Organizacion/
 │   └── Requerimientos.md
 └── segunda-entrega/
+    ├── index.html
+    ├── package.json
+    ├── vite.config.js
+    ├── public/
+    └── src/
+        ├── api/
+        ├── assets/
+        ├── components/
+        ├── data/
+        ├── layout/
+        ├── pages/
+        ├── styles/
+        └── utils/
 ```
 
 ## Cómo ver el sitio
@@ -114,6 +127,11 @@ Ambas terminales deben permanecer abiertas para que funcionen el menú y las res
 Para detener los servidores, presioná **Ctrl+C** en cada terminal.
 Si aparece `EADDRINUSE` al iniciar la API, detené la instancia anterior que esté usando el puerto 3001.
 
+#### Dependencias y vulnerabilidades
+
+Al ejecutar `npm audit` en `segunda-entrega` el resultado es **0 vulnerabilidades**
+(ninguna crítica, alta, moderada ni baja).
+
 #### Compilación y previsualización
 
 Desde `segunda-entrega`:
@@ -138,3 +156,8 @@ Abrí [la página de inicio](primera-entrega/index.html) en tu navegador.
 - [x] Maquetado HTML + CSS
 - [x] Funcionalidad JavaScript
 - [x] Deploy en GitHub Pages
+- [x] Proyecto React con Vite, rutas con `react-router-dom` y `Outlet`
+- [x] Estilos con Sass (SCSS)
+- [x] API simulada con json-server (menú, categorías, horarios y reservas)
+- [x] Carrito guardado en `localStorage`
+- [x] Validaciones en tiempo real en el formulario de reservas
