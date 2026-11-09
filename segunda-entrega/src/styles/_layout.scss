@@ -77,6 +77,10 @@
     text-decoration: underline;
 }
 
+.pie-logo {
+    margin-bottom: 8px;
+}
+
 @media (max-width: $punto-corte-movil) {
     .encabezado-contenido {
             flex-wrap: wrap;
