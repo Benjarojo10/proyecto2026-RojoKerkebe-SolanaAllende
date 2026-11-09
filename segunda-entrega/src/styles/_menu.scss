@@ -119,6 +119,16 @@
     font-size: 0.95rem;
 }
 
+.plato .plato-marca {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--verde-oliva);
+}
+
+.plato-marca a {
+    color: var(--verde-musgo);
+}
+
 .plato-accion {
     display: flex;
     flex-direction: column;

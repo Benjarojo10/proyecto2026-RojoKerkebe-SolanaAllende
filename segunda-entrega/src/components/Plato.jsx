@@ -8,6 +8,12 @@ const Plato = ({ producto, onAgregar }) => (
         <div className="plato-info">
             <h3>{producto.nombre}</h3>
             <p>{producto.description}</p>
+            <p className="plato-marca">
+                {producto.marca} ·{" "}
+                <a href={producto.web} target="_blank" rel="noopener noreferrer">
+                    Ver más
+                </a>
+            </p>
         </div>
         <div className="plato-accion">
             <span className="precio">{formatearPrecio(producto.precio)}</span>
